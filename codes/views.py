@@ -28,8 +28,8 @@ def otp(request):
         #user1.save()
         a = mob.objects.filter(number=number).values('number')
         if a: 
-            account_sid = 'AC02774cdb3cbca7b42d060d779d67bfe0'
-            auth_token = 'dd9ccceb2561e554c4d4ed01ab4a72eb'
+            account_sid = 'account_sid'
+            auth_token = 'auth_token'
             client = Client(account_sid, auth_token)
         
             string = "0123456789"
