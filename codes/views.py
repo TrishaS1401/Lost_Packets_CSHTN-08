@@ -5,6 +5,7 @@ from django.contrib import messages
 from codes.models import Subject, mob,contact,log,Quiz,Question, Answer, Result, Assignment, AssignmentUpload, Video
 from django.views.generic import ListView
 from django.http.response import HttpResponse
+from django.http import JsonResponse
 
 # Create your views here.
 def veri(request):
@@ -158,13 +159,6 @@ def fp(request):
             return render(request, 'fpass.html')
      else:
         return render(request, 'fpass.html')
-
-
-
-
-
-
-from django.http import JsonResponse
 
 
 class QuizListView(ListView):
