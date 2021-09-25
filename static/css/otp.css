@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+h1 { font-size: 26px; font-weight: 300; color: #fff; line-height: 46px; font-style: italic; }
+
+::-moz-selection { background: #4bc9ae; color: #fff; text-shadow: none; }
+::selection { background: #4bc9ae; color: #fff; text-shadow: none; }
+
+
+.form-example { padding: 20px 0; }
+
+.form-example p { color: #fff; color: rgba(255, 255, 255, 0.8); }
+.form-example p.description { margin-bottom: 20px; }
+.form-example p.copyright { margin-top: 40px; }
+
+.form-example .form-group { text-align: left; }
+
+.form-example input[type="text"],
+.form-example input[type="password"] {
+    background: #fff; 
+    border: 2px solid #4bc9ae; 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: large;
+    font-weight: 400; 
+    color: #888; 
+    box-shadow: inset;
+    text-align: center;
+}
+
+
+.form-example input[type="text"]::-moz-placeholder { 
+    font-size: large;
+    text-align: center;
+    margin-top: 3px;
+    color: #bbb; font-style: italic; 
+}
+
+.form-example input[type="text"]:-ms-input-placeholder { 
+    font-size: large;
+    text-align: center;
+    margin-top: 3px;
+    color: #bbb; font-style: italic; }
+
+.form-example input[type="text"]::-webkit-input-placeholder { 
+    font-size: large;
+    text-align: center;
+    margin-bottom: 3px;
+    color: #bbb; font-style: italic; }
+
+.form-example button.btn-customized {
+	margin-top: 1rem;
+	padding: .75rem 1.5rem;
+	border: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	font-weight: 400; color: #fff;
+    box-shadow: none;
+    border-radius: black;
+
+}
+
+body{
+    background-image: url(https://cdn.dribbble.com/users/3821672/screenshots/7172846/media/bdcf195a8ceaf94cd2e55ee274095c91.gif);
+    background-size: cover;
+    background-position: 70% 20%;
+    /* object-fit: bottom right; */
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+
+}
+
+.container {
+    position: relative;
+    top: 150px;
+    left: -28%;
+
+}
+
+label[for=password] {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+
+.btn {
+    background-color:   #5533ff;
+    position: relative;
+    right: -145px;
+    top: 6px;
+    border: none;
+}
+.btn:hover{
+    background-image:  linear-gradient(95deg, #5533ff 40%, #25ddf5 100%);
+}

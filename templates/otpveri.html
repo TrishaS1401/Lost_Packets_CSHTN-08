@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/otp.css">
+    <title>OTP</title>
+</head>
+<body class="h-100">
+    <div class="container h-100 ">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-10 col-md-8 col-lg-6">
+                    <div class="form-group">
+<form id="otpveri" method="post" action='/verifyotp'>
+{% csrf_token %}
+<input type="hidden" id="var" name="def" value="{{ otpnum }}">
+<label for="password">OTP</label><input type="text" name="otp" id="otp" autofocus="on" autocomplete="off" class="form-control username w-75 h-50 mt-2" placeholder="*****">
+<button type="submit"  class="btn btn-success w-25">Submit</button>
+</form>
+</body>
+
+</html>

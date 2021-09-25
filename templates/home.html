@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Slabo+27px&family=Stick+No+Bills:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <a href="https://icons8.com/icon/44484/code"></a>
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+    <title>My Home</title>
+</head>
+<body>
+              <!-- NAVBAR -->
+
+              <nav class="navbar">
+                <div class="navbar">
+                  <ul  class="nav justify-content ">
+                    <li class="nav-item logo">
+                      <label class="navbar-brand title-logo">DevDen</label>
+                    </li>
+                  </ul>
+                </div>
+                <div classs="navbar">
+                  <ul  class="nav justify-content-end ">
+
+                  
+                    <li class="nav-item">
+					{% for user in users %}
+                     {% if request.session.email == user.email %}
+                     <a class="nav-link" href="#">Hii, {{user.username}}</a>
+                     {% endif %}
+                     {% endfor %}
+                    </li>
+                    <li class="nav-item" >
+					{% for user in users %}
+                     {% if request.session.email == user.email %}
+                <a class="nav-link" href="/logout">Logout</a>
+				  {% endif %}
+                {% endfor %}
+                </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/contacts">Contact</a>
+                
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+              <div class="All_course">
+                <h1 style="text-align:center;" >Courses</h1>
+              </div>
+
+             <!-- CARDS 1st row -->
+            
+            <div class="row row-cols-1 row-cols-md-3 mt-5 mb-5 p-5 g-4">
+              {% for sub in subject %}
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="{{sub.sub_img.url}}" height="200px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <a href="/hello"><h5 class="card-title">{{sub.sub_name}}</h5></a>
+                      <p class="card-text">{{sub.sub_desp}}</p>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+
+</body>
+</html>

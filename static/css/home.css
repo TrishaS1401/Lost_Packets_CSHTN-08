@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root{
+    --fw-reg: 300;
+    --fw-bold: 800;
+    
+    --clr-light: #fff;
+    --clr-dark: #000000;
+    --clr-green1: #5ec171;
+    --clr-green2: #00b16a;
+    --clr-green3: #03c9a9;
+    --clr-blue1: #00b5cc;
+    --clr-blue2:#22a7f0;
+    --clr-blue3: #89c4f4;
+    --clr-red1: #f22613;
+    --clr-red2: #d91e18;
+    --clr-orange1: #f9690e;
+    --clr-orange2: #f89406;
+    --clr-grey1: #67809f;
+    --clr-grey2: #dadfe1;
+    --clr-grey3: #bdc3c7;
+    
+    --fs-h1: 2.8em;
+    --fs-h2: 2.5em;
+    --fs-h3: 1.25rem;
+    --fs-h4: 1.1rem;
+    --fs-body: 1rem;
+    
+     --bs: -3px 4px 5px rgb(1, 50, 67);
+    
+    --ir: from-image 300dpi;
+}
+
+@media (min-width: 700px) {
+    :root{
+        --fs-h1: 4em;
+        --fs-h2: 3.5em;
+        --fs-h3: 1.75rem;
+        --fs-h4: 1.25rem;
+        --fs-body: 1.125rem;
+
+        --ir: from-image 300dpi;
+
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--clr-light);
+    color: var(--clr-dark);
+}
+
+
+
+.navbar{
+    background-image:  linear-gradient(95deg, #5533ff 40%, #25ddf5 100%);
+     margin-top:0px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+    font-family: 'Arvo', serif;
+}
+
+li a{
+    color: var(--clr-light);
+    font-size: 20px;
+}
+
+li a:hover{
+    color: var(--clr-light);
+    font-weight: 500;
+}
+
+li a:active{
+    color: var(--clr-light);
+    font-weight: 500;
+    transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    -o-transform: translateY(3px);
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.title-logo {
+    font-size: 2.2rem;
+    font-family:'Stick No Bills', sans-serif;
+    color: var(--clr-light);
+}
+.All_course h1{
+   position:relative;
+   top:30px;
+   font-weight: 800;
+   font-family: 'Arvo', serif;
+   
+}
+
+.card{
+    box-shadow: 3px 2px 3px 2px #5533ff;
+    width: 18rem;
+    height: 18rem;
+    cursor: pointer;
+}
+
+.card-body{
+    text-align: center;
+    cursor: pointer;
+}
+
+.card-img-top{
+    margin-top: 8%;
+    object-fit: contain;
+    align-self: center;
+    width: 55%;
+    cursor: pointer;
+}
+
+.card:hover{
+    box-shadow: 8px 8px 6px 4px #25ddf5 ;
+    transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    -o-transform: translateY(-8px);
+    cursor: pointer;
+}
+
+
